@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form - By aqc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/resets.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <style>
+    .attribution {
+      font-size: 11px;
+
+      color: black;
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+
+    }
+
+    .attribution a {
+      color: white;
+      color: blue;
+      width: 100%;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Form Section -->
+  <main>
+    <div class="mobile">
+    </div>
+    <div class="container">
+      <section class="form-section">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="step-block">
+            <div class="badge step-1--badge badge--active">
+              1
+            </div>
+            <div class="step__texts">
+              <p class="step__description">
+                Step 1
+              </p>
+              <p class="step__title">
+                Your info
+              </p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="badge step-2--badge">
+              2
+            </div>
+            <div class="step__texts">
+              <p class="step__description">
+                Step 2
+              </p>
+              <p class="step__title">
+                Select plan
+              </p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="badge step-3--badge">
+              3
+            </div>
+            <div class="step__texts">
+              <p class="step__description">
+                Step 3
+              </p>
+              <p class="step__title">
+                Add-ons
+              </p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="badge step-4--badge">
+              4
+            </div>
+            <div class="step__texts">
+              <p class="step__description">
+                Step 4
+              </p>
+              <p class="step__title">
+                Summary
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" action="" id="form">
+          <!-- Step 1 -->
+          <div class="personal-info">
+            <div class="form-header">
+              <h2 class="form-header__title ">
+                Personal info
+              </h2>
+              <p class="form-header__description">
+                Please provide your name, email address, and phone number.
+              </p>
+            </div>
+
+            <div class="personal-form">
+              <div class="personal-form-block">
+                <label class="personal-form__label d-flex justify-space-between" for="name">Name
+                  <span class="show-error-input" data-error="id1">This field is required</span>
+                </label>
+                <input class="personal-form__input" type="text" name="name" id="name" placeholder="e.g. Stephen King">
+              </div>
+              <div class="personal-form-block">
+                <label class="personal-form__label d-flex justify-space-between" for="email">Email Address
+                  <span class="show-error-input" data-error="id2">This field is required</span>
+                </label>
+                <input class="personal-form__input" type="email" name="email" id="email"
+                  placeholder="e.g. Stephen King">
+              </div>
+              <div class="personal-form-block">
+                <label class="personal-form__label d-flex justify-space-between" for="phone">Phone Number
+                  <span class="show-error-input" data-error="id3">This field is required</span>
+                </label>
+                <input class="personal-form__input" type="text" name="phone" id="phone" placeholder="e.g. 123-456-7890">
+              </div>
+
+              <input class="next-btn" type="button" data-btn="btnStep1" value="Next step">
+
+
+
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="select-plan">
+            <div class="form-header">
+              <h2 class="form-header__title">
+                Select you plan
+              </h2>
+              <p class="form-header__description">
+                You have the option of monthly or yearly billing.
+              </p>
+            </div>
+            <div class="select-form">
+              <div class="select-plan-cards">
+                <div class="select-plan-card__item" data-plan="arcade-plan">
+                  <div class="plan-selector" data-plan="arcade"></div>
+                  <figure class="select-plan-card__figure">
+                    <img class="select-plan-card__img" src="assets/images/icon-arcade.svg" alt="">
+                  </figure>
+                  <div class="select-plan-card-texts">
+                    <h3 class="select-plan-card-text__title">
+                      Arcade
+                    </h3>
+                    <p class="select-plan-card-text__description">
+                      <span data-price="arcade">
+                        $9/mo
+
+                      </span>
+
+                    </p>
+                  </div>
+                </div>
+                <div class="select-plan-card__item" data-plan="advanced-plan">
+                  <div class="plan-selector" data-plan="advanced"></div>
+                  <figure class="select-plan-card__figure">
+                    <img class="select-plan-card__img" src="assets/images/icon-advanced.svg" alt="">
+                  </figure>
+                  <div class="select-plan-card-texts">
+                    <h3 class="select-plan-card-text__title">
+                      Advanced
+                    </h3>
+                    <p class="select-plan-card-text__description">
+                      <span data-price="advanced">
+                        $12/mo
+
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="select-plan-card__item" data-plan="pro-plan">
+                  <div class="plan-selector" data-plan="pro"></div>
+                  <figure class="select-plan-card__figure">
+                    <img class="select-plan-card__img" src="assets/images/icon-pro.svg" alt="">
+                  </figure>
+                  <div class="select-plan-card-texts">
+                    <h3 class="select-plan-card-text__title">
+                      Pro
+                    </h3>
+                    <p class="select-plan-card-text__description">
+                      <span data-price="pro">
+                        $15/mo
+
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="select-plan-range">
+                <span class="select-plan-choose select-plan-choose--active" data-period="monthly">Monthly</span>
+                <div class="toggle-container">
+                  <div class="toggle toggle--active" data-toggle="monthly"></div>
+                  <div class="toggle" data-toggle="yearly"></div>
+                </div>
+                <span class="select-plan-choose" data-period="yearly">Yearly</span>
+              </div>
+              <input class="back-btn" type="button" value="Go Back" data-back="btnStep2">
+              <input class="next-btn" type="button" data-btn="btnStep2" value="Next step">
+            </div>
+
+          </div>
+
+          <!-- Step 3 -->
+          <div class="pick-add-ons">
+            <div class="form-header">
+              <h2 class="form-header__title">
+                Pick add-ons
+              </h2>
+              <p class="form-header__description">
+                Add-ons help enhance your gaming experience.
+              </p>
+            </div>
+            <div class="pick-add-ons-form">
+              <div class="pick-add-ons-form__item" data-pick="online_service_item">
+                <div class="pick-choose" data-pick="online_service">
+
+                </div>
+                <div class="pick-add-ons-form__item-check" data-pick="online_service_check">
+                </div>
+                <div class="pick-add-ons-form__description">
+                  <h4 for="online_service">
+                    Online service
+                  </h4>
+                  <p class="pick-add-ons-form__description-text">
+                    Access to multiplayer games
+                  </p>
+                </div>
+                <p class="pick-add-ons-form__item-price">
+                  +$1/mo
+                </p>
+
+              </div>
+              <div class="pick-add-ons-form__item" data-pick="large_storage_item">
+                <div class="pick-choose" data-pick="large_storage">
+
+                </div>
+                <div class="pick-add-ons-form__item-check" data-pick="large_storage_check">
+                </div>
+                <div class="pick-add-ons-form__description">
+                  <h4 for="online_service">
+                    Large storage
+                  </h4>
+                  <p class="pick-add-ons-form__description-text">
+                    Extra 1TB of cloud save
+                  </p>
+                </div>
+                <p class="pick-add-ons-form__item-price">
+                  +$2/mo
+                </p>
+
+              </div>
+              <div class="pick-add-ons-form__item" data-pick="customizable_item">
+                <div class="pick-choose" data-pick="customizable_profile">
+
+                </div>
+                <div class="pick-add-ons-form__item-check" data-pick="customizable_check">
+                </div>
+                <div class="pick-add-ons-form__description">
+                  <h4 for="online_service">
+                    Customizable Profile
+                  </h4>
+                  <p class="pick-add-ons-form__description-text">
+                    Custom theme on your profile
+                  </p>
+                </div>
+                <p class="pick-add-ons-form__item-price">
+                  +$2/mo
+                </p>
+
+              </div>
+
+              <input class="back-btn" type="button" value="Go Back" data-back="btnStep3">
+              <input class="next-btn" type="button" data-btn="btnStep3" value="Next step">
+            </div>
+
+          </div>
+
+          <!-- Step 4 -->
+          <div class="finishing-up">
+            <div class="form-header">
+              <h2 class="form-header__title">
+                Finishing up
+              </h2>
+              <p class="form-header__description">
+                Double-check everything looks OK before confirming.
+              </p>
+            </div>
+            <div class="finishing-up-form">
+              <div class="finish-up-form-card">
+
+              </div>
+
+              <input class="back-btn" type="button" value="Go Back" data-back="btnStep4">
+              <input class="next-btn next-btn--blue" type="submit" data-btn="btnStep4" value="Confirm">
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="thank-you">
+            <img src="assets/images/icon-thank-you.svg" alt="">
+            <h2 class="form-header__title">
+              Thank you!
+            </h2>
+            <p class="form-header__description thank-p">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.
+            </p>
+          </div>
+        </form>
+
+      </section>
+    </div>
+
+  </main>
+
+
+
+
+  <div class="attribution">
+    Challenge by <a rel="noopener" href="https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ"
+      target="_blank">Frontend
+      Mentor</a>.
+    Coded by <a rel="noopener" href="https://www.frontendmentor.io/profile/AdanQuijadaC"
+      target="_blank">AdanQuijadaC</a>.
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
